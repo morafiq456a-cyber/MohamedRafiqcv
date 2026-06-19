@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Rafiq Elbogdady | Cybersecurity Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        h1 {
+            font-size: 3em;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #8892b0;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .contact-info a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 212, 255, 0.2);
+        }
+        h2 {
+            color: #00d4ff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, #00d4ff, transparent);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: rgba(0, 212, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 10px;
+            border-left: 3px solid #00d4ff;
+            transition: all 0.3s;
+        }
+        .skill-item:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateX(5px);
+        }
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #0f0f23;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+        .timeline-item {
+            border-left: 2px solid #00d4ff;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #00d4ff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00d4ff;
+        }
+        .lang-bar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .lang-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #0099cc);
+            border-radius: 4px;
+        }
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #8892b0;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .contact-info { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="typing-effect">Mohamed Rafiq Elbogdady</h1>
+            <p class="tagline">Cybersecurity Student | Top 1% TryHackMe | Red Team Enthusiast</p>
+            <div class="contact-info">
+                <a href="mailto:morafiq456.a@gmail.com">📧 morafiq456.a@gmail.com</a>
+                <a href="tel:+201008324165">📱 +20 100 832 4165</a>
+                <a href="https://tryhackme.com/p/MOnyx">🎯 TryHackMe Profile</a>
+                <a href="https://www.linkedin.com/in/mohamed-rafiq-47488b342/">💼 LinkedIn</a>
+            </div>
+            <p style="margin-top: 15px; color: #8892b0;">📍 Etay El-Baroud, El-Beheira, Egypt</p>
+        </header>
+
+        <div class="section">
+            <h2>🛡️ Professional Summary</h2>
+            <p>Motivated Cybersecurity student with hands-on experience in <strong>Penetration Testing</strong>, <strong>SOC Operations</strong>, vulnerability assessment, Active Directory basics, and network security through practical labs and CTF-style challenges.</p>
+            <p style="margin-top: 10px;">Ranked in the <span class="achievement-badge">Top 1%</span> on TryHackMe with over <strong>200+ completed labs</strong> focused on offensive security, enumeration, web application security, and privilege escalation. Passionate about continuous learning in Red Teaming, SOC Analysis, Penetration Testing, and Security.</p>
+        </div>
+
+        <div class="section">
+            <h2>⚡ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Network Enumeration & Scanning</div>
+                <div class="skill-item">Vulnerability Assessment</div>
+                <div class="skill-item">Log Analysis Basics</div>
+                <div class="skill-item">Security Monitoring Basics</div>
+                <div class="skill-item">Incident Response Fundamentals</div>
+                <div class="skill-item">OWASP Top 10 Fundamentals</div>
+                <div class="skill-item">Privilege Escalation Basics</div>
+                <div class="skill-item">Active Directory Enumeration Basics</div>
+            </div>
+            
+            <h3 style="color: #00d4ff; margin: 20px 0 10px;">🛠️ Tools & Technologies</h3>
+            <div class="skills-grid">
+                <div class="skill-item">Nmap</div>
+                <div class="skill-item">Burp Suite</div>
+                <div class="skill-item">Wireshark</div>
+                <div class="skill-item">Metasploit</div>
+                <div class="skill-item">Gobuster</div>
+                <div class="skill-item">Hydra</div>
+                <div class="skill-item">SQLmap</div>
+            </div>
+
+            <h3 style="color: #00d4ff; margin: 20px 0 10px;">💻 Operating Systems & Networking</h3>
+            <div class="skills-grid">
+                <div class="skill-item">Kali Linux</div>
+                <div class="skill-item">Windows</div>
+                <div class="skill-item">Basic Windows Server Administration</div>
+                <div class="skill-item">TCP/IP, DNS, HTTP/HTTPS, SSH</div>
+                <div class="skill-item">Routing & Switching Fundamentals</div>
+            </div>
+
+            <h3 style="color: #00d4ff; margin: 20px 0 10px;">📝 Programming & Scripting</h3>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Bash</div>
+                <div class="skill-item">C++ Fundamentals</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Practical Experience</h2>
+            
+            <div class="timeline-item">
+                <h3 style="color: #00d4ff;">TryHackMe & Hands-On Cybersecurity Labs</h3>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Ranked in the <strong>Top 1%</strong> on TryHackMe</li>
+                    <li>Completed <strong>200+ practical cybersecurity labs</strong> and CTF-style challenges</li>
+                    <li>Practiced enumeration, exploitation, privilege escalation, and Active Directory</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 style="color: #00d4ff;">Virtual Home Lab</h3>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Built and configured virtual lab environments using <strong>VMware</strong> and <strong>VirtualBox</strong></li>
+                    <li>Simulated network attacks and defensive monitoring scenarios for educational purposes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📚 Training & Learning Paths</h2>
+            <div class="skills-grid">
+                <div class="skill-item">✅ TryHackMe — Cyber Security 101 Path</div>
+                <div class="skill-item">✅ TryHackMe — Pre-Security Path</div>
+                <div class="skill-item">⏳ TryHackMe — SOC Level 1 Path (In Progress)</div>
+                <div class="skill-item">⏳ TryHackMe — Junior Penetration Tester Path (In Progress)</div>
+                <div class="skill-item">⏳ INE eJPTv2 Course (In Progress)</div>
+                <div class="skill-item">📖 Offensive Security OSCP Preparation (Self-Study)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <div class="timeline-item">
+                <h3 style="color: #00d4ff;">Bachelor of Computer Science</h3>
+                <p>Faculty of Computer and Information Science, <strong>Tanta University</strong></p>
+                <p style="color: #8892b0;">Expected Graduation: <strong>2028</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Achievements</h2>
+            <div style="text-align: center;">
+                <span class="achievement-badge">🥇 Top 1% TryHackMe</span>
+                <span class="achievement-badge">🏅 200+ Labs Completed</span>
+                <span class="achievement-badge">🎯 Top 200 Global Rank</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🧠 Soft Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Analytical & Problem-Solving Skills</div>
+                <div class="skill-item">Technical Report Writing</div>
+                <div class="skill-item">Team Collaboration & Communication</div>
+                <div class="skill-item">Attention to Detail</div>
+                <div class="skill-item">Fast Learner & Self-Motivated</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌍 Languages</h2>
+            <div style="display: grid; gap: 15px;">
+                <div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Arabic</span>
+                        <span style="color: #00d4ff;">Native</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 100%;"></div></div>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>English</span>
+                        <span style="color: #00d4ff;">Intermediate (Technical Proficiency)</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 65%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with 💙 by Mohamed Rafiq Elbogdady | Cybersecurity Portfolio 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // Typing effect
+        const text = "Mohamed Rafiq Elbogdady";
+        const typingElement = document.querySelector('.typing-effect');
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typingElement.textContent = text.substring(0, i + 1);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        typingElement.textContent = '';
+        setTimeout(typeWriter, 500);
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
